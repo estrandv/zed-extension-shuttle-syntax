@@ -1,0 +1,11 @@
+id = "zed-extension-shuttle-notation"
+name = "Shuttle Notation Syntax"
+version = "0.0.1"
+schema_version = 1
+authors = ["Your Name <you@example.com>"]
+description = "Syntax highlighting for shuttle"
+repository = "https://github.com/your-name/my-zed-extension"
+
+[grammars.shuttle]
+repository = "https://github.com/estrandv/tree-sitter-shuttle-notation"
+rev = "dc81cbd0d67e443b992bbb17c0147fce1cc4f5d0"

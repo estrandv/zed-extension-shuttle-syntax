@@ -1,0 +1,4 @@
+name = "Shuttle Notation"
+grammar = "shuttle"
+path_suffixes = ["shuttle"]
+line_comments = ["# "]
