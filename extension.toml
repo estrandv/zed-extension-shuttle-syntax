@@ -8,4 +8,4 @@ repository = "https://github.com/estrandv/zed-extension-shuttle-syntax"
 
 [grammars.shuttle]
 repository = "https://github.com/estrandv/tree-sitter-shuttle-notation"
-rev = "dc81cbd0d67e443b992bbb17c0147fce1cc4f5d0"
+rev = "70739704034c343de7bc7c4a9e033df1c0297f5d"
