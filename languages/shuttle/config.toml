@@ -2,3 +2,9 @@ name = "shuttle"
 grammar = "shuttle"
 path_suffixes = ["shuttle"]
 line_comments = ["# "]
+# TODO: Seems "brackets" is a needed key?
+brackets = [
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "[", end = "]", close = true, newline = true },
+    { start = "(", end = ")", close = true, newline = true },
+]
