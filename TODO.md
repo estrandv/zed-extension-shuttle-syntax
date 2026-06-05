@@ -11,10 +11,11 @@
 
 ## Left to do
 
-- [ ] **Verify highlighting live in Zed** (can't be done headless):
-      `zed: install dev extension` → pick this folder → open `example.shuttle`
-      and `example.bbd`. Confirm note sequences inside billboard track lines get
-      shuttle highlighting (injection working).
+- [x] `validate.sh` — CLI validation script (10 checks, runs in CI or headless)
+- [ ] **Verify highlighting live in Zed** (highlight injection can't be tested
+      headless): `zed: install dev extension` → pick this folder → open
+      `example.shuttle` and `example.bbd`. Confirm note sequences inside
+      billboard track lines get shuttle highlighting (injection working).
 - [ ] **Publish to Zed marketplace:** create a GitHub release with the extension
       package, then submit to https://zed.dev/extensions
 - [ ] **Optional polish:** tune highlight scopes to your Zed theme; the synth-header
