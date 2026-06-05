@@ -1,0 +1,15 @@
+DEFAULT amp0.5,sus1.0,time0.5
+
+>>> drums bass keys
+
+COMMAND /set_bpm 120
+COMMAND /set_scale c maj 4
+
+*@SP_Roland808:drums ofs0,sus20,amp0.6 1:0 2:14 3:26
+(14:1.5 14:0.5 x:1 14:1)*4   # kick / hat pattern
+€reverb:main room0.4,mix0.25
+
+@moogBass:bass susT0.5,sus0.01,amp1
+(c4:4 c4:4 bb3:4 a3:2 bb3:2):0.5
+<harmony;amp*0.8> (e5 g5 c6 e6):sus4.0
+€delay:echo echo0.25,echt4
