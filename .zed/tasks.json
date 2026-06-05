@@ -1,0 +1,31 @@
+[
+  {
+    "label": "JDW: Play file",
+    "command": "~/mypython/bin/python",
+    "args": ["~/programming/jdw-pycompose/run.py", "--update", "{ZED_FILE}"],
+    "tags": ["jdw", "billboard"]
+  },
+  {
+    "label": "JDW: Setup file",
+    "command": "~/mypython/bin/python",
+    "args": ["~/programming/jdw-pycompose/run.py", "--setup", "{ZED_FILE}"],
+    "tags": ["jdw", "billboard"]
+  },
+  {
+    "label": "JDW: Stop sequencer",
+    "command": "~/mypython/bin/python",
+    "args": ["~/programming/jdw-pycompose/run.py", "--stop"],
+    "tags": ["jdw", "sequencer"]
+  },
+  {
+    "label": "JDW: NRT render",
+    "command": "~/mypython/bin/python",
+    "args": [
+      "~/programming/jdw-pycompose/run.py",
+      "--nrt",
+      "{ZED_FILE}",
+      "{ZED_FILE}.wav"
+    ],
+    "tags": ["jdw", "nrt"]
+  }
+]

@@ -108,6 +108,37 @@ Then install the extension in Zed via `zed: install dev extension` and open
 - **Extension loads but nothing highlights** — verify `config.toml` has the
   correct `grammar` key matching the `name` field in the grammar's `grammar.js`.
 
+## VSCode → Zed port
+
+This extension was ported from a [VS Code extension](https://github.com/estrandv/jdw-billboarding-vscode).
+Key differences:
+
+| Feature | VSCode | Zed |
+|---------|--------|-----|
+| Syntax highlighting | TextMate grammar (regex) | Tree-sitter queries (AST-aware) |
+| Language config | `language-configuration.json` | `config.toml` |
+| JDW Commands | Command palette (`extension.js`) | `.zed/tasks.json` (project-level) |
+
+The tree-sitter approach is more precise — highlighting respects the actual syntax
+structure rather than regex patterns. The `.zed/tasks.json` provides equivalent
+JDW commands (Play, Setup, Stop, NRT) that can be run from Zed's task runner.
+
+## JDW Commands (ported from VSCode)
+
+This extension bundles a `.zed/tasks.json` template with the equivalent of the
+VSCode JDW commands:
+
+| Task | VSCode command | Action |
+|------|---------------|--------|
+| JDW: Play file | `JDW: Play` | Sends queue update via pycompose |
+| JDW: Setup file | `JDW: Setup` | Loads synthdefs, samples, config |
+| JDW: Stop sequencer | (toolbar) | Stops all sequences |
+| JDW: NRT render | (script) | Offline render to WAV |
+
+To use them, copy `.zed/tasks.json` to your project's `.zed/` directory (or
+create a symlink). The tasks reference `~/mypython/bin/python` and
+`~/programming/jdw-pycompose/run.py` — adjust paths if your layout differs.
+
 ## Before publishing
 
 1. Push both grammar repos to GitHub.
