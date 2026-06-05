@@ -1,19 +1,13 @@
 # TODO — zed-extension-shuttle-syntax
 
-## Status (2026-06-03)
+## Status (2026-06-05)
 
-Both grammars rewritten/created and wired into this extension. Everything
-parses and passes tests; the only unverified step is live highlighting in Zed.
-
-- [x] **Shuttle grammar** rewritten (`../tree-sitter-shuttle-notation`, committed
-      `28d8df3`) — repetition `*N`, arg operators/refs, section args/suffixes,
-      bare-prefix notes all work. 22/22 corpus tests pass.
-- [x] **Billboard grammar** created (`../tree-sitter-jdw-billboarding`, committed
-      `4384778`) — line-based, delegates track content to shuttle via injection.
-      14/14 corpus tests pass; all 17 real `.bbd` songs parse clean.
-- [x] Extension wired: `extension.toml` points at both grammars, `languages/shuttle/`
-      highlights refreshed to new node names, new `languages/billboard/`
-      (config + highlights + injections), `example.bbd` added.
+- [x] Both grammars published to PyPI (v0.3.0 shuttle, v0.1.0 billboard)
+- [x] CI fixed with `wheel tags` platform retagging
+- [x] Docs overhaul across all 15 repos
+- [x] Extension.toml switched to GitHub URLs
+- [x] VSCode features ported: improved highlights, brackets, .zed/tasks.json
+- [x] All code committed and pushed
 
 ## Left to do
 
@@ -21,10 +15,8 @@ parses and passes tests; the only unverified step is live highlighting in Zed.
       `zed: install dev extension` → pick this folder → open `example.shuttle`
       and `example.bbd`. Confirm note sequences inside billboard track lines get
       shuttle highlighting (injection working).
-- [ ] **Before publishing:** push both grammar repos to GitHub, then in
-      `extension.toml` switch each `repository` from the local `file://` path back
-      to its GitHub URL (kept in the comment above each entry) and bump the rev.
-- [ ] Decide whether to commit this extension repo (currently uncommitted).
-- [ ] Optional polish: tune highlight scopes to your Zed theme; the synth-header
+- [ ] **Publish to Zed marketplace:** create a GitHub release with the extension
+      package, then submit to https://zed.dev/extensions
+- [ ] **Optional polish:** tune highlight scopes to your Zed theme; the synth-header
       tail / sampler pad config is currently one opaque `additional_config` node
       (`@string`) — could be sub-parsed later if richer coloring is wanted.

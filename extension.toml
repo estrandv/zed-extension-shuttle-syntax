@@ -6,18 +6,10 @@ authors = ["estrandv <emil.strandvik@gmail.com>"]
 description = "Syntax highlighting for shuttle and jdw-billboarding"
 repository = "https://github.com/estrandv/zed-extension-shuttle-syntax"
 
-# NOTE: the `file://` repositories below point at the LOCAL grammar repos so the
-# rewritten grammars can be installed as a dev extension and verified offline.
-# Before publishing, push both grammar repos to GitHub and switch each
-# `repository` back to its GitHub URL (kept in the comment) at the matching rev.
-
 [grammars.shuttle]
-# repository = "https://github.com/estrandv/tree-sitter-shuttle-notation"
-repository = "file:///home/estrandv/programming/tree-sitter-shuttle-notation"
-rev = "b1bed6141617d5c8a54b92d450712897444d2211"
+repository = "https://github.com/estrandv/tree-sitter-shuttle-notation"
+rev = "05d9cfbe7faaebafecacc40f2faeda4c64ad86fa"
 
-# Grammar key must match the `name` field in the grammar's grammar.js.
 [grammars.jdw_billboarding]
-# repository = "https://github.com/estrandv/tree-sitter-jdw-billboarding"
-repository = "file:///home/estrandv/programming/tree-sitter-jdw-billboarding"
-rev = "43847782e0bd10e458fc69645b5c9e3f5bf1d258"
+repository = "https://github.com/estrandv/tree-sitter-jdw-billboarding"
+rev = "fff4bf065dc898ce485e137d49ae434b87055a09"
